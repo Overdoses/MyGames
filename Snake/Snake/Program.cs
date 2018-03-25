@@ -10,8 +10,26 @@ namespace MyGames
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("asd");
-            Console.ReadKey();
+            
+            View set = new View(3,1,'*');         
+            set.Draw();
+            View glob = new View(4,2,'/');
+            glob.Draw();
+            Point ds = new Point();
+            ds.x = '*';
+            ds.y = '$';
+            ds.a = '&';
+            ds.b = '3';
+            List<int> MyList = new List<int>();
+            MyList.Add(ds.a);
+            MyList.Add(ds.b);
+            MyList.Add(ds.y);
+            MyList.Add(ds.x);
+            foreach (char i in MyList)
+            {
+                Console.Write(i);
+            }
+            Console.ReadLine();
         }
     }
 }
